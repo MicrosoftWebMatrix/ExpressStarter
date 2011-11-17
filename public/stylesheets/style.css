@@ -62,7 +62,7 @@ header > nav > ul > li > a {
 footer {
   width: 100%;
   padding: 10px 0px 10px 0px;
-  boder: 1px solid #000;
+  border: 1px solid #999;
   background-color: #ccc;
   margin-bottom: 25px;
 }

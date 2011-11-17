@@ -1,0 +1,30 @@
+!!! 5
+html
+  head
+    title= title
+    
+    // include default stylesheets and any view stylesheets
+    link(rel='stylesheet', href='/stylesheets/style_mobile.css')
+    link(rel='stylesheet', href='/jquery-mobile/jquery.mobile-1.0rc3.min.css')
+    block stylesheets
+
+    // include default scripts and any view scripts
+    script(src='/javascripts/jquery-1.7.min.js')
+    script(src='/jquery-mobile/jquery.mobile-1.0rc3.min.js')
+
+    
+    block javascripts
+
+    meta(name="viewport", content="width=device-width, initial-scale=1") 
+  body
+    div(data-role="page")
+      div(data-role="header")
+        a(href="/", data-icon="home", data-iconpos="notext", data-direction="reverse", class="ui-btn-left jqm-home") Home
+        h1 &lt;WebMatrix/&gt; 
+      div(data-role="content")!= body
+      div(data-role="footer")
+        block
+          h4 make web not war
+    
+      
+    
