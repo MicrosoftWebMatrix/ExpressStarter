@@ -1,0 +1,17 @@
+
+// woah!  I can use whack whack comments in jade
+// also, more importantly, you can include things in the master page
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/chat.css')
+
+block javascripts
+ script(src='/socket.io/socket.io.js')
+ script(src='/javascripts/chat.js')
+
+
+h1 lets chat!
+#chat
+div
+  input(type="text", id="message")
+  input(type="button", value="send", id="send")
+  

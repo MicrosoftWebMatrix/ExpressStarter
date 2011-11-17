@@ -1,0 +1,11 @@
+{
+    "name": "webmatrix-express-template"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.0"
+    , "jade": ">= 0.0.1"
+    , "stylus": ">= 0.19.2"
+    , "socket.io": ">=0.8.7"
+  }
+}

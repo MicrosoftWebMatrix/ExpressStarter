@@ -1,0 +1,76 @@
+body {
+  background-color: #eee;
+  margin: 0px;
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #666;
+}
+#top {
+  width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: right;
+}
+header {
+  width: 100%;
+  height: 50px;
+  boder: 1px solid #000;
+  background-color: #444;
+}
+header > nav {
+  width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+}
+header > nav > #logo {
+  float: left;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: 5px;
+}
+header > nav > ul {
+  color: #eee;
+  list-style: none;
+}
+header > nav > ul > li {
+  height: 50px;
+  float: left;
+  display: inline;
+  padding: 0px 20px 0px 20px;
+  font-weight: bold;
+}
+header > nav > ul > li:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+header > nav > ul > li > a {
+  float: left;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+#container {
+  clear: both;
+  width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 25px;
+}
+footer {
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  boder: 1px solid #000;
+  background-color: #ccc;
+  margin-bottom: 25px;
+}
+footer > #content {
+  width: 1024px;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #666;
+  margin-right: auto;
+  margin-left: auto;
+}

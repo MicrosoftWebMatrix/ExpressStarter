@@ -1,0 +1,19 @@
+#chat {
+  border: 1px solid #999;
+  background-color: #ddd;
+  overflow: auto;
+  width: 400px;
+  height: 300px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+input[type=text] {
+  width: 370px;
+}
+input[type=button] {
+  width: 50px;
+}
+user-me {
+  font-weight: bold;
+  color: #f00;
+}
