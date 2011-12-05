@@ -1,23 +1,24 @@
 var path = require('path');
 
 /*
- * GET home page.
+ * GET home page. 
  */
 
 exports.index = function(req, res){
   var rd = getRenderData(req, 'index');
-  res.render(rd.view, { title: 'Welcome to WebMatrix', layout: rd.layout })
-};
-
-exports.about = function(req, res) {
-	var rd = getRenderData(req, 'about');
-	res.render(rd.view, { title: 'About this template', layout: rd.layout })
+  res.render(rd.view, { title: 'Home Page.  ', layout: rd.layout })
 };
 
 exports.chat = function(req, res) {
 	var rd = getRenderData(req, 'chat');
-	res.render(rd.view, { title: 'Let\'s chat!', layout: rd.layout })
+	res.render(rd.view, { title: 'Let\'s chat!  ', layout: rd.layout })
 };
+
+exports.about = function(req, res) {
+	var rd = getRenderData(req, 'about');
+	res.render(rd.view, { title: 'About Me.  ', layout: rd.layout })
+} 
+ 
 
 /**
  * determine which layout and view express should use based on mobile browser detection
@@ -31,11 +32,11 @@ function getRenderData(req, viewName) {
 	var layout = isMobile ? 'layout_mobile' : 'layout';
 
 	var view = viewName;
-	if (isMobile) {
+	if (isMobile) {		
 		var guess = path.normalize(__dirname + '/../views/' + viewName + "_mobile.jade");
 		var exists = path.existsSync(guess);
 		if (exists)
 			view = viewName + "_mobile";
 	}
-	return { layout: layout, view: view };
+	return { layout: layout, view: view, isMobile: isMobile };
 }

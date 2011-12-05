@@ -9,11 +9,13 @@ block javascripts
  script(src='/javascripts/chat.js')
 
 
-h1 lets chat!
+section(class="main-content")
+  h3= title
 
-#chat
-div
-  input(type="text", id="message")
-  input(type="button", value="send", id="send")
+  #chat
+
+  div
+    input(type="text", id="message")
+    input(type="button", value="send", id="send")
 
   

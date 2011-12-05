@@ -1,8 +1,11 @@
+var socket = null;
+
 $(function() {
 
-  var name = prompt('what is your name?') || 'WebMatrix User';
+  //var name = prompt('what is your name?', 'WebMatrix User') || 'WebMatrix User';
+  var name = 'WebMatrix User';
 
-  var socket = io.connect();
+  socket = io.connect();
   
   socket.on('connect', function () {
     socket.emit('setname', name);
@@ -25,11 +28,22 @@ $(function() {
   });
 
   $("#send").click(function(e){
-  	e.preventDefault();
-  	var msg = $("#message").val();
-  	socket.send(msg);
-  	$("#chat").append($("<div><span class=\"user-me\">me:&nbsp;</span>" + msg + "</div>"));
-  	$("#message").val('');
+    e.preventDefault();
+    submitMessage();
   });
 
+  $('#message').keypress(function(e) {
+    if(e.which == 13)
+      submitMessage();
+  });
+
+  $("#message").focus();
+  
 })
+
+function submitMessage() {
+  var msg = $("#message").val();
+  $("#chat").append($("<div><span class=\"user-me\">me:&nbsp;</span>" + msg + "</div>"));
+  $("#message").val('');
+  socket.send(msg);
+}
