@@ -4,7 +4,6 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
   , less = require('less')
 
 var app = module.exports = express.createServer();
@@ -14,7 +13,7 @@ var app = module.exports = express.createServer();
 
 app.configure(function(){
   app.set('views', __dirname + '/views'); 
-  app.set('view engine', 'jade');
+  app.set('view engine', 'jade');  
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(require('./middleware/locals'));
@@ -32,10 +31,8 @@ app.configure('production', function(){
 });
 
 // Routes
+require('./routes/home')(app);
 
-app.get('/', routes.index);
-app.get('/chat', routes.chat);
-app.get('/about', routes.about);
 
 // socket.io configuration
 var buffer = [];
