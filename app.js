@@ -4,11 +4,44 @@
  */
 
 var express = require('express')
-  , less = require('less')
+    less = require('less'),
+    everyauth = require('everyauth'),
+    nconf = require('nconf');
 
 var app = module.exports = express.createServer();
 
+nconf.file({file: 'settings.json'});
 
+everyauth.debug = true;
+
+// Configure Facebook auth
+var usersById = {},
+    nextUserId = 0,
+    usersByFacebookId = {};
+
+everyauth.
+    everymodule.
+    findUserById(function (id, callback) {
+	callback(null, usersById[id]);
+    });
+
+everyauth.
+    facebook.
+    appId(nconf.get('facebook:applicationId')).
+    appSecret(nconf.get('facebook:applicationSecret')).
+    findOrCreateUser(
+	function(session, accessToken, accessTokenExtra, fbUserMetadata){
+	    return usersByFacebookId[fbUserMetadata.claimedIdentifier] || 
+		(usersByFacebookId[fbUserMetadata.claimedIdentifier] = 
+		 addUser('facebook', fbUserMetadata));
+	}).
+    redirectPath('/');
+
+function addUser (source, sourceUser) {
+    var user =  {id: ++nextUserId, source: sourceUser};
+    usersById[nextUserId] = user;
+    return user;
+}
 // Configuration
 
 app.configure(function(){
@@ -16,8 +49,11 @@ app.configure(function(){
   app.set('view engine', 'jade');  
   app.use(express.bodyParser());
   app.use(express.methodOverride());
+  app.use(express.cookieParser());
+  app.use(express.session({secret: 'azure zomg'}));
   app.use(require('./middleware/locals'));
   app.use(express.compiler({ src: __dirname + '/public', enable: ['less']}));
+  app.use(everyauth.middleware());
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
@@ -65,6 +101,8 @@ io.sockets.on('connection', function (socket) {
     })
   })
 });
+
+everyauth.helpExpress(app);
 
 app.listen(process.env.PORT || 3000);
 //console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

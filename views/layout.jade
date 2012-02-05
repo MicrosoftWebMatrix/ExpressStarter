@@ -17,11 +17,14 @@ html
             a(href="/") your logo here.
         div(class="float-right")
           section#login
-            ul
-              li
-                a(href="/") Register
-              li
-                a(href="/") Log in
+            -if(!everyauth.loggedIn)
+              a.fb_button_medium(href='/auth/facebook', class="button")
+                img(src=base + '/images/facebookLogin.png')
+            -else
+              ul
+                li Welcome !{everyauth.facebook.user.first_name} from !{everyauth.facebook.user.location.name}!
+                li
+                  a(href="#") Logout
           nav
             ul#menu
               li 

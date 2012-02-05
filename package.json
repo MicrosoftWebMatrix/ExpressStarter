@@ -3,7 +3,9 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-      "express": "2.5.0"
+      "everyauth": "0.2.29"
+    , "nconf": "0.5.1"
+    , "express": "2.5.0"
     , "jade": ">= 0.18.0"
     , "less": ">= 1.1.5"
     , "socket.io": ">=0.8.7"

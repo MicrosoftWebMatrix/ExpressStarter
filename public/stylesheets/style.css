@@ -138,6 +138,9 @@ footer {
   padding: 2px 3px;
   text-decoration: none;
 }
+#login a.button {
+  background: none;
+}
 #login a.username {
   background: none;
   margin-left: 0px;
