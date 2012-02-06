@@ -1,0 +1,22 @@
+section(class="featured")
+  div(class="content-wrapper")
+      hgroup(class="title")
+        h1=title         
+      div
+        - if (error === undefined)
+            p We are so sorry.  Something has gone terribly awry.  
+        - else
+            p You are seeing a stack trace because it is enabled in app.js for development mode.  To turn this off, modify app.js and set errorOptions.showStack to false.
+
+
+// based on being in dev/prod mode, an err object may be passed in here.  This is an example of using
+// conditionals with Jade to choose what we render in a template based on a value in the model
+section(class="main-content")
+  #stack
+    - if (error === undefined)
+        h3 We have encountered an internal server error.  
+        p We're really quite sorry.  I don't know how you got here, but there's really nothing to see.
+    - else
+        h3= "Internal Server Error: " + error.toString()
+        p= error.stack
+ 

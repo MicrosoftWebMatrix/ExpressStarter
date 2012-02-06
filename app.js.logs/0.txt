@@ -1,85 +1,24 @@
    [36minfo  -[39m socket.io started
-index // layout // index
-layout // false // layout
-chat // layout // chat
-layout // false // layout
-   [90mdebug -[39m served static content /socket.io.js
-   [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 1778526561236627327
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1778526561236627327?t=1323372134785
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m client authorized for 
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 1::
-   [90mdebug -[39m set close timeout for client 1778526561236627327
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"setname","args":["WebMatrix User"]}
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m xhr-polling received data packet �48�5:::{"name":"setname","args":["WebMatrix User"]}�48�5:::{"name":"setname","args":["WebMatrix User"]}�48�5:::{"name":"setname","args":["WebMatrix User"]}�48�5:::{"name":"setname","args":["WebMatrix User"]}�48�5:::{"name":"setname","args":["WebMatrix User"]}�48�5:::{"name":"setname","args":["WebMatrix User"]}�48�5:::{"name":"setname","args":["WebMatrix User"]}�48�5:::{"name":"setname","args":["WebMatrix User"]}�48�5:::{"name":"setname","args":["WebMatrix User"]}
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1778526561236627327?t=1323372134786
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"messages","args":[{"buffer":[]}]}
-   [90mdebug -[39m set close timeout for client 1778526561236627327
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 1778526561236627327
-   [90mdebug -[39m xhr-polling received data packet �48�5:::{"name":"setname","args":["WebMatrix User"]}�48�5:::{"name":"setname","args":["WebMatrix User"]}�48�5:::{"name":"setname","args":["WebMatrix User"]}
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/1778526561236627327?t=1323372134794
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 1778526561236627327
-chat // layout // chat
-layout // false // layout
-   [90mdebug -[39m served static content /socket.io.js
-   [90mdebug -[39m client authorized
-   [36minfo  -[39m handshake authorized 889546742061452989
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/889546742061452989?t=1323372138241
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m client authorized for 
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 1::
-   [90mdebug -[39m set close timeout for client 889546742061452989
-   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"setname","args":["WebMatrix User"]}
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"announcement":"WebMatrix User connected"}]}
-   [90mdebug -[39m set close timeout for client 1778526561236627327
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/889546742061452989?t=1323372138246
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"messages","args":[{"buffer":[]}]}
-   [90mdebug -[39m set close timeout for client 889546742061452989
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 889546742061452989
-   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/889546742061452989?t=1323372138258
-   [90mdebug -[39m setting poll timeout
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m cleared close timeout for client 889546742061452989
-   [90mdebug -[39m xhr-polling received data packet 3:::hello there
-   [90mdebug -[39m broadcasting packet
-about // layout // about
-layout // false // layout
-index // layout // index
-layout // false // layout
-   [90mdebug -[39m fired close timeout for client 1778526561236627327
-   [36minfo  -[39m transport end
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m clearing poll timeout
-   [90mdebug -[39m xhr-polling writing 5:::{"name":"announcement","args":[{"announcement":"WebMatrix User disconnected"}]}
-   [90mdebug -[39m set close timeout for client 889546742061452989
-   [90mdebug -[39m discarding transport
-   [90mdebug -[39m fired close timeout for client 889546742061452989
-   [36minfo  -[39m transport end
-   [90mdebug -[39m broadcasting packet
-   [90mdebug -[39m discarding transport
+Express server listening on port NaN in development mode
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\express-template\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.compiler [as handle] (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\node_modules\connect\lib\middleware\compiler.js:114:5)
+    at next (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\express-template\middleware\locals.js:22:5)
+Error: This is a 500 Error
+    at C:\Users\justbe\Dropbox\Code\express-template\routes\global.js:11:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.compiler [as handle] (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\node_modules\connect\lib\middleware\compiler.js:114:5)
+    at next (C:\Users\justbe\Dropbox\Code\express-template\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\express-template\middleware\locals.js:22:5)
