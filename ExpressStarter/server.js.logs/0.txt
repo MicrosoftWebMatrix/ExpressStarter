@@ -1,0 +1,169 @@
+   [36minfo  -[39m socket.io started
+Express server listening on port NaN in development mode
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+   [90mdebug -[39m served static content /socket.io.js
+   [90mdebug -[39m client authorized
+   [36minfo  -[39m handshake authorized 5331755071522759635
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/5331755071522759635?t=1328573729991
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m client authorized for 
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 1::
+   [90mdebug -[39m set close timeout for client 5331755071522759635
+   [90mdebug -[39m xhr-polling received data packet 5:::{"name":"setname","args":["WebMatrix User"]}
+   [90mdebug -[39m broadcasting packet
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/5331755071522759635?t=1328573730002
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 5:::{"name":"messages","args":[{"buffer":[]}]}
+   [90mdebug -[39m set close timeout for client 5331755071522759635
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m cleared close timeout for client 5331755071522759635
+   [90mdebug -[39m setting request GET /socket.io/1/xhr-polling/5331755071522759635?t=1328573730013
+   [90mdebug -[39m setting poll timeout
+   [90mdebug -[39m discarding transport
+   [90mdebug -[39m cleared close timeout for client 5331755071522759635
+   [90mdebug -[39m xhr-polling received data packet 3:::test
+   [90mdebug -[39m broadcasting packet
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+Error: This is a 500 Error
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:11:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+[object Object]
+    at C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\routes\global.js:16:15
+    at callbacks (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:272:11)
+    at param (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:246:11)
+    at pass (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:253:5)
+    at Router._dispatch (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:280:4)
+    at Object.handle (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\lib\router\index.js:45:10)
+    at next (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\express\node_modules\connect\lib\http.js:203:15)
+    at Object.oncomplete (C:\Users\justbe\Dropbox\Code\ExpressStarter\ExpressStarter\node_modules\connect\lib\middleware\static.js:150:11)
+   [90mdebug -[39m clearing poll timeout
+   [90mdebug -[39m xhr-polling writing 8::
+   [90mdebug -[39m set close timeout for client 5331755071522759635
+   [90mdebug -[39m xhr-polling closed due to exceeded duration
+   [90mdebug -[39m fired close timeout for client 5331755071522759635
+   [36minfo  -[39m transport end
+   [90mdebug -[39m broadcasting packet
+   [90mdebug -[39m discarding transport

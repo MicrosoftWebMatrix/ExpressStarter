@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebPlatform>
+  <Links>
+    <AddLink InDashboard="True">
+      <Title>Welcome to Node.js</Title>
+      <Description>Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.</Description>
+      <Uri>http://nodejs.org/</Uri>
+      <ImageUri>http://justbe-server/node32.png</ImageUri>
+    </AddLink>
+    <AddLink InDashboard="True" InLearn="True">
+      <Title>Node.js API Documentation</Title>
+      <Description>Use the documentation from nodejs.org to get started.</Description>
+      <Uri>http://nodejs.org/docs/latest/api/index.html</Uri>
+      <ImageUri>http://justbe-server/node32.png</ImageUri>
+    </AddLink>
+	  <AddLink InDashboard="True" InLearn="True">
+		  <Title>Browse the npm registry</Title>
+		  <Description>npm is a package manager for node. You can use it to install and publish your node programs. It manages dependencies and does other cool stuff.</Description>
+		  <Uri>http://npmjs.org/</Uri>
+		  <ImageUri>http://justbe-server/node32.png</ImageUri>
+	  </AddLink>
+  </Links>
+
+</WebPlatform>

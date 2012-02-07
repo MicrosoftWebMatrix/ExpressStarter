@@ -1,7 +1,10 @@
 !!! 5
 html
   head
-    title= title
+    - if (typeof(title) == 'undefined')
+        title Welcome to WebMatrix
+    - else 
+        title= title
     
     // include default stylesheets and any view stylesheets
     link(rel='stylesheet', href=base + '/stylesheets/style.css')
@@ -21,7 +24,7 @@ html
               li
                 a(href="/") Register
               li
-                a(href="/") Log in
+                a(href="/login") Log in
           nav
             ul#menu
               li 

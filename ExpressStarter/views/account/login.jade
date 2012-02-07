@@ -1,0 +1,29 @@
+section(class="main-content")
+    hgroup(class="title")
+      h1 Log in.
+      h2 Enter your user name and password below.
+
+      section(id="loginForm")
+        form(method="post", action="/login")
+            fieldset
+                legend Log in to Your Account
+                ol
+                    li(class="username")
+                        label(for="username") Username:
+                        input(type="text", name="username")
+                    li(class="password")
+                        label(for="password") Password:
+                        input(type="password", name="password")
+                    li(class="remember-me")
+                        input(type="checkbox", id="rememberMe", name="rememberMe", value="true")
+                        label(class="checkbox", for="rememberMe") Remember me?
+                input(type="submit", value="Login")
+
+        a(href="/account/register") Don't have an Account?
+        a(href="/account/forgotPassword") Did you forget your password?
+  
+    section(class="social", id="socialLoginForm")    
+        form(method="post")
+            fieldset
+                legend Log in using another service
+                input(type="submit", name="provider", id="twitter", value="Log in using your Twitter account")
