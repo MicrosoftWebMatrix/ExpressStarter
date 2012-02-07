@@ -9,5 +9,6 @@
     , "socket.io": ">=0.8.7"
     , "connect": ">=1.8.5"
     , "passport": ">=0.1.6"
+    , "passport-twitter": ">=0.1.0"
   }
 }
