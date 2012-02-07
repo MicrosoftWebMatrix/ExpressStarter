@@ -1,0 +1,39 @@
+
+section(class="featured")
+  div(class="content-wrapper")
+      hgroup(class="title")
+          h1=title 
+          h2 Use this page to manage your tasks
+
+section(class="main-content")
+    table
+        tr
+            th Name
+            th Category
+            th Date
+            th
+             each item in tasklist
+                tr
+                    td #{item.name}
+                    td #{item.category} 
+                    td #{item.date} 
+                    td
+                        form(action="/complete", method="post")
+                            input(type="hidden", name="item[RowKey]", value="#{item.RowKey}")
+                            input(type="submit", value="Complete")
+    hr
+    form(action="/newitem", method="post")
+        table    
+            tr
+                td Task Name: 
+                td 
+                    input(name="item[name]", type="textbox")
+            tr
+                td Task Category: 
+                td 
+                    input(name="item[category]", type="textbox")
+            tr
+                td Task Date: 
+                td 
+                    input(name="item[date]", type="textbox")
+        input(type="submit", value="Add item")
