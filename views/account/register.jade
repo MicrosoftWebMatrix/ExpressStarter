@@ -1,0 +1,33 @@
+section(class="main-content")
+    hgroup(class="title")
+        h1= title
+        h2 Use the form(below to create a new account
+    
+    - if ('undefined' !== typeof errors && errors.length)
+      ul#errors
+        - each error in errors
+          li.error= error
+
+    form(method="post")
+        fieldset
+            legend Registration Form
+            ol
+                li(class="email")
+                    label(for=everyauth.password.loginFormFieldName) Email address
+                    input(type="text", name=everyauth.password.loginFormFieldName, value=userParams[everyauth.password.loginFormFieldName])
+                li(class="password")
+                    label(for="password") Password
+                    input(type="password", name=everyauth.password.passwordFormFieldName)
+                li(class="confirm-password")
+                    label(for="confirmPassword") Confirm password
+                    input(type="password", id="confirmPassword", name="confirmPassword")
+                li(class="recaptcha")
+                    div(class="message-info")
+                        p To enable CAPTCHA verification...
+
+            input(type="submit", value="Register")
+            p
+                | Did you know you can use other services to log in to this site? 
+                | Click
+                a(href="/login") here
+                | to log in using one of the supported services.

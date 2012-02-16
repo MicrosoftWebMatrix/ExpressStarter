@@ -12,18 +12,20 @@ var express = require('express')
   , nconf = require('nconf');
 
 
-
-
+/**
+* CONFIGURATION
+* -------------------------------------------------------------------------------------------------
+* load configuration settings from settings.json.  Contains keys for OAuth logins. See 
+* settings.example.json.  
+**/
+nconf.file({file: 'settings.json'});
 
 
 /**
-* OAUTH FEDERATED IDENTITY
+* EVERYAUTH AUTHENTICATION
 * -------------------------------------------------------------------------------------------------
 * allows users to log in and register using OAuth
 **/
-
-
-nconf.file({file: 'settings.json'});
 
 everyauth.debug = true;
 
@@ -31,7 +33,10 @@ everyauth.debug = true;
 var usersById = {},
     nextUserId = 0,
     usersByFacebookId = {},
-    usersByTwitId = {};
+    usersByTwitId = {},
+    usersByLogin = {
+        'justbe@microsoft.com': addUser({ email: 'justbe@microsoft.com', password: 'azure'})
+    };
 
 everyauth.
     everymodule.
@@ -39,6 +44,7 @@ everyauth.
 	callback(null, usersById[id]);
     });
 
+// facebook authentication
 everyauth.
     facebook.
     appId(nconf.get('facebook:applicationId')).
@@ -51,6 +57,7 @@ everyauth.
 	}).
     redirectPath('/');
 
+// twitter authentication
 everyauth
   .twitter
     .consumerKey(nconf.get('twitter:consumerKey'))
@@ -60,11 +67,65 @@ everyauth
     })
     .redirectPath('/');
 
+// username / password authentication
+everyauth
+  .password
+    .loginWith('email')
+    .getLoginPath('/login')
+    .postLoginPath('/login')
+    .loginView('account/login')
+    .loginLocals( function (req, res, done) {
+      setTimeout( function () {
+        done(null, {
+          title: 'login.  '
+        });
+      }, 200);
+    })
+    .authenticate( function (login, password) {
+      var errors = [];
+      if (!login) errors.push('Missing login');
+      if (!password) errors.push('Missing password');
+      if (errors.length) return errors;
+      var user = usersByLogin[login];
+      if (!user) return ['Login failed'];
+      if (user.password !== password) return ['Login failed'];
+      return user;
+    })
+    .getRegisterPath('/register')
+    .postRegisterPath('/register')
+    .registerView('account/register')
+    .registerLocals( function (req, res, done) {
+      setTimeout( function () {
+        done(null, {
+          title: 'Register.  '
+        });
+      }, 200);
+    })
+    .validateRegistration( function (newUserAttrs, errors) {
+      var login = newUserAttrs.login;
+      if (usersByLogin[login]) errors.push('Login already taken');
+      return errors;
+    })
+    .registerUser( function (newUserAttrs) {
+      var login = newUserAttrs[this.loginKey()];
+      return usersByLogin[login] = addUser(newUserAttrs);
+    })
+    .loginSuccessRedirect('/')
+    .registerSuccessRedirect('/');
 
+// add a user to the in memory store of users.  If you were looking to use a persistent store, this
+// would be the place to start
 function addUser (source, sourceUser) {
-    var user =  {id: ++nextUserId, source: sourceUser};
-    usersById[nextUserId] = user;
-    return user;
+  var user;
+  if (arguments.length === 1) { 
+    user = sourceUser = source;
+    user.id = ++nextUserId;
+    return usersById[nextUserId] = user;
+  } else { // non-password-based
+    user = usersById[++nextUserId] = {id: nextUserId};
+    user[source] = sourceUser;
+  }
+  return user;
 }
 
 

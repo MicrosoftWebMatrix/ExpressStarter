@@ -24,11 +24,15 @@ html
             -if(!everyauth.loggedIn)
                 li
                     a(href="/login") Log in
+                li
+                    a(href="/register") Register
             -else
                 -if(everyauth.facebook)
                     li Welcome !{everyauth.facebook.user.first_name} !{everyauth.facebook.user.last_name}!
                 -else if(everyauth.twitter)
                     li Welcome !{everyauth.twitter.user.name}!
+                -else if(everyauth.password)
+                    li Welcome !{everyauth.user.email}!
                 li 
                     a(href="/logout") Logout
           nav
