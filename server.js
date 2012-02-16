@@ -9,7 +9,7 @@ var express = require('express')
   , less = require('less')
   , connect = require('connect')
   , passport = require('passport')
-  , TwitterStrategy = require('passport-twitter');
+  , TwitterStrategy = require('passport-twitter').Strategy;
 
 var app = module.exports = express.createServer();
 
@@ -49,6 +49,28 @@ app.use(require('./middleware/errorHandler')(errorOptions));
 
 
 
+
+/**
+* OAUTH FEDERATED IDENTITY
+* -------------------------------------------------------------------------------------------------
+* allows users to log in and register using OAuth
+**/
+
+passport.use(new TwitterStrategy({
+    consumerKey: 'HjrVsJgQ4jkx8h7GSdl6w',
+    consumerSecret: 'r5IEGTeczmZ43b9SvO9ZcBb0MgTANyL2MQLyqLQ',
+    callbackURL: "/auth/twitter/callback"
+},
+  function(token, tokenSecret, profile, done) {
+      console.log(profile);
+      //User.findOrCreate(..., function (err, user) {
+      //  if (err) { return done(err); }
+      //  done(null, user);
+      //});
+  }
+));
+
+
 /**
 * ROUTING
 * -------------------------------------------------------------------------------------------------
@@ -60,6 +82,10 @@ require('./routes/account')(app);
 
 // Global Routes - this should be last!
 require('./routes/global')(app);
+
+
+
+
 
 
 
