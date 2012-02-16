@@ -15,10 +15,10 @@ var express = require('express')
 /**
 * CONFIGURATION
 * -------------------------------------------------------------------------------------------------
-* load configuration settings from settings.json.  Contains keys for OAuth logins. See 
+* load configuration settings from ENV, then settings.json.  Contains keys for OAuth logins. See 
 * settings.example.json.  
 **/
-nconf.file({file: 'settings.json'});
+nconf.env().file({file: 'settings.json'});
 
 
 /**
