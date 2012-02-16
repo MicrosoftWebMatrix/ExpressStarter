@@ -1,6 +1,0 @@
-<parameters>
-  <parameter name="Parameter 1" description="Full site path where you want to install 
-          your application (for example, ExpressStarter/Application)." defaultValue="ExpressStarter" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="iisApp" match="ExpressStarter" />
-  </parameter>
-</parameters>
