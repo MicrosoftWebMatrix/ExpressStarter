@@ -76,7 +76,8 @@ h5, h6 {
   font-size: 1em;
 }
 /* main layout
-----------------------------------------------------------*/.content-wrapper {
+----------------------------------------------------------*/
+.content-wrapper {
   margin: 0 auto;
   max-width: 960px;
 }
@@ -109,7 +110,8 @@ footer {
   height: 100px;
 }
 /* site title
-----------------------------------------------------------*/.site-title {
+----------------------------------------------------------*/
+.site-title {
   color: #c8c8c8;
   font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
   font-size: 2.3em;
@@ -122,7 +124,8 @@ footer {
   text-decoration: none;
 }
 /* login
-----------------------------------------------------------*/#login {
+----------------------------------------------------------*/
+#login {
   display: block;
   font-size: .85em;
   margin: 20px 0 12px;
@@ -143,12 +146,13 @@ footer {
 #login ul {
   margin: 0;
 }
-#login ul li {
+#login li {
   display: inline;
   list-style: none;
 }
 /* menu
-----------------------------------------------------------*/ul#menu {
+----------------------------------------------------------*/
+ul#menu {
   font-size: 1.3em;
   font-weight: 600;
   margin: 0;
@@ -169,7 +173,9 @@ ul#menu li a:hover {
   text-decoration: none;
 }
 /* page elements
-----------------------------------------------------------*//* featured */.featured {
+----------------------------------------------------------*/
+/* featured */
+.featured {
   background-color: #fff;
 }
 .featured .content-wrapper {
@@ -188,7 +194,8 @@ ul#menu li a:hover {
 .featured p {
   font-size: 1.1em;
 }
-/* page titles */hgroup.title {
+/* page titles */
+hgroup.title {
   margin-bottom: 10px;
 }
 hgroup.title h1, hgroup.title h2 {
@@ -198,12 +205,14 @@ hgroup.title h2 {
   font-weight: normal;
   margin-left: 3px;
 }
-/* features */section.feature {
+/* features */
+section.feature {
   width: 300px;
   float: left;
   padding: 10px;
 }
-/* ordered list */ol.round {
+/* ordered list */
+ol.round {
   list-style-type: none;
   padding-left: 0;
 }
@@ -220,7 +229,8 @@ ol.round li.two {
 ol.round li.three {
   background: url("../images/orderedListThree.png") no-repeat;
 }
-/* content */article {
+/* content */
+article {
   float: left;
   width: 70%;
 }
@@ -239,7 +249,8 @@ aside ul li {
 .label {
   font-weight: 700;
 }
-/* login page */#loginForm {
+/* login page */
+#loginForm {
   border-right: solid 2px #c8c8c8;
   float: left;
   width: 45%;
@@ -253,7 +264,8 @@ aside ul li {
   float: left;
   width: 50%;
 }
-/* contact */.contact h3 {
+/* contact */
+.contact h3 {
   font-size: 1.2em;
 }
 .contact p {
@@ -263,7 +275,8 @@ aside ul li {
   border: 1px solid #333;
   margin: 5px 0 0 10px;
 }
-/* forms */fieldset {
+/* forms */
+fieldset {
   border: none;
   margin: 0;
   padding: 0;
@@ -305,13 +318,15 @@ fieldset input[type="submit"] {
   font-weight: 600;
   padding: 7px;
 }
-/* ajax login/registration dialog */.modal-popup {
+/* ajax login/registration dialog */
+.modal-popup {
   font-size: 0.7em;
 }
 .modal-popup input[type="text"], .modal-popup input[type="password"] {
   width: 90%;
 }
-/* info and errors */.message-info {
+/* info and errors */
+.message-info {
   border: 1px solid;
   clear: both;
   padding: 10px 20px;
@@ -332,7 +347,8 @@ fieldset input[type="submit"] {
 .error {
   color: #e80c4d;
 }
-/* styles for validation helpers */.field-validation-error {
+/* styles for validation helpers */
+.field-validation-error {
   color: #e80c4d;
   font-weight: bold;
 }
@@ -374,38 +390,34 @@ a.twitter {
 }
 /********************
 *   Mobile Styles   *
-********************/@media only screen and (max-width: 850px) {
+********************/
+@media only screen and (max-width: 850px) {
   /* header
       ----------------------------------------------------------*/
   header .float-left, header .float-right {
     float: none;
   }
-  
   /* logo */
   header .site-title {
     margin: 10px;
     text-align: center;
   }
-  
   /* login */
   #login {
     font-size: .85em;
     margin: 0 0 12px;
     text-align: center;
   }
-  
   #login ul {
     margin: 5px 0;
     padding: 0;
   }
-  
   #login li {
     display: inline;
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  
   #login a {
     background: none;
     color: #999;
@@ -413,100 +425,82 @@ a.twitter {
     margin: 2px;
     padding: 0;
   }
-  
   #login a:hover {
     color: #333;
   }
-  
   /* menu */
   nav {
     margin-bottom: 5px;
   }
-  
   ul#menu {
     margin: 0;
     padding: 0;
     text-align: center;
   }
-  
   ul#menu li {
     margin: 0;
     padding: 0;
   }
-  
   /* main layout
       ----------------------------------------------------------*/
   .main-content, .featured + .main-content {
     background-position: 10px 0;
   }
-  
   .content-wrapper {
     padding-right: 10px;
     padding-left: 10px;
   }
-  
   .featured .content-wrapper {
     padding: 10px;
   }
-  
   /* page content */
   article, aside {
     float: none;
     width: 100%;
   }
-  
   /* ordered list */
   ol.round {
     list-style-type: none;
     padding-left: 0;
   }
-  
   ol.round li {
     padding-left: 10px;
     margin: 25px 0;
   }
-  
   ol.round li.one, ol.round li.two, ol.round li.three {
     background: none;
   }
-  
   /* features */
   section.feature {
     float: none;
     padding: 10px;
     width: auto;
   }
-  
   section.feature img {
     color: #999;
     content: attr(alt);
     font-size: 1.5em;
     font-weight: 600;
   }
-  
   /* forms */
   fieldset input[type="text"], fieldset input[type="password"] {
     width: 90%;
   }
-  
   /* login page */
   #loginForm {
     border-right: none;
     float: none;
     width: auto;
   }
-  
   #loginForm .validation-error {
     display: block;
     margin-left: 15px;
   }
-  
   #socialLoginForm {
     margin-left: 0;
     float: none;
     width: auto;
   }
-  
   /* footer
       ----------------------------------------------------------*/
   footer {

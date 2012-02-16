@@ -26,4 +26,10 @@ section(class="main-content")
         form(method="post")
             fieldset
                 legend Log in using another service
-                a(href="/auth/twitter") Log in using your Twitter account
+                a.fb_button_medium(href='/auth/facebook', class="button")
+                    img(src=base + '/images/facebookLogin.png')
+                
+                br
+
+                a(href='/auth/twitter', style='border: 0px')
+                    img(style='border: 0px', src='https://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-l.png')

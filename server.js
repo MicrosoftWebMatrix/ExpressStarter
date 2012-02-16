@@ -8,8 +8,67 @@
 var express = require('express')
   , less = require('less')
   , connect = require('connect')
-  , passport = require('passport')
-  , TwitterStrategy = require('passport-twitter').Strategy;
+  , everyauth = require('everyauth')
+  , nconf = require('nconf');
+
+
+
+
+
+
+/**
+* OAUTH FEDERATED IDENTITY
+* -------------------------------------------------------------------------------------------------
+* allows users to log in and register using OAuth
+**/
+
+
+nconf.file({file: 'settings.json'});
+
+everyauth.debug = true;
+
+// Configure Facebook auth
+var usersById = {},
+    nextUserId = 0,
+    usersByFacebookId = {},
+    usersByTwitId = {};
+
+everyauth.
+    everymodule.
+    findUserById(function (id, callback) {
+	callback(null, usersById[id]);
+    });
+
+everyauth.
+    facebook.
+    appId(nconf.get('facebook:applicationId')).
+    appSecret(nconf.get('facebook:applicationSecret')).
+    findOrCreateUser(
+	function(session, accessToken, accessTokenExtra, fbUserMetadata){
+	    return usersByFacebookId[fbUserMetadata.claimedIdentifier] || 
+		(usersByFacebookId[fbUserMetadata.claimedIdentifier] = 
+		 addUser('facebook', fbUserMetadata));
+	}).
+    redirectPath('/');
+
+everyauth
+  .twitter
+    .consumerKey(nconf.get('twitter:consumerKey'))
+    .consumerSecret(nconf.get('twitter:consumerSecret'))
+    .findOrCreateUser( function (sess, accessToken, accessSecret, twitUser) {
+      return usersByTwitId[twitUser.id] || (usersByTwitId[twitUser.id] = addUser('twitter', twitUser));
+    })
+    .redirectPath('/');
+
+
+function addUser (source, sourceUser) {
+    var user =  {id: ++nextUserId, source: sourceUser};
+    usersById[nextUserId] = user;
+    return user;
+}
+
+
+
 
 var app = module.exports = express.createServer();
 
@@ -26,9 +85,8 @@ app.configure(function() {
     app.use(express.methodOverride());
     app.use(require('./middleware/locals'));
     app.use(express.cookieParser());
-    app.use(express.session({ secret: 'keyboard cat' }));
-    app.use(passport.initialize());
-    app.use(passport.session());
+    app.use(express.session({ secret: 'azure zomg' }));
+    app.use(everyauth.middleware());
     app.use(express.compiler({ src: __dirname + '/public', enable: ['less'] }));
     app.use(connect.static(__dirname + '/public'));
     app.use(app.router);
@@ -49,26 +107,6 @@ app.use(require('./middleware/errorHandler')(errorOptions));
 
 
 
-
-/**
-* OAUTH FEDERATED IDENTITY
-* -------------------------------------------------------------------------------------------------
-* allows users to log in and register using OAuth
-**/
-
-passport.use(new TwitterStrategy({
-    consumerKey: 'HjrVsJgQ4jkx8h7GSdl6w',
-    consumerSecret: 'r5IEGTeczmZ43b9SvO9ZcBb0MgTANyL2MQLyqLQ',
-    callbackURL: "/auth/twitter/callback"
-},
-  function(token, tokenSecret, profile, done) {
-      console.log(profile);
-      //User.findOrCreate(..., function (err, user) {
-      //  if (err) { return done(err); }
-      //  done(null, user);
-      //});
-  }
-));
 
 
 /**
@@ -133,6 +171,7 @@ io.sockets.on('connection', function(socket) {
 * this starts up the server on the given port
 **/
 
+everyauth.helpExpress(app);
 app.listen(process.env.PORT || 3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 

@@ -2,7 +2,7 @@
 html
   head
     - if (typeof(title) == 'undefined')
-        title Welcome to WebMatrix
+        title Express Starter Template
     - else 
         title= title
     
@@ -21,10 +21,16 @@ html
         div(class="float-right")
           section#login
             ul
-              li
-                a(href="/") Register
-              li
-                a(href="/login") Log in
+            -if(!everyauth.loggedIn)
+                li
+                    a(href="/login") Log in
+            -else
+                -if(everyauth.facebook)
+                    li Welcome !{everyauth.facebook.user.first_name} !{everyauth.facebook.user.last_name}!
+                -else if(everyauth.twitter)
+                    li Welcome !{everyauth.twitter.user.name}!
+                li 
+                    a(href="/logout") Logout
           nav
             ul#menu
               li 
