@@ -1,10 +1,15 @@
 {
-   "facebook": {
-    "applicationId": "{your Facebook app ID}",
-    "applicationSecret": "{your Facebook app secret}"
-  },
-  "twitter": {
-      "consumerKey": "{ your twitter consumer key }",
-      "consumerSecret": "{ your twitter consumer secret }"
+    "facebook": {
+        "applicationId": "{your Facebook app ID}",
+        "applicationSecret": "{your Facebook app secret}"
+    },
+    "twitter": {
+        "consumerKey": "{ your twitter consumer key }",
+        "consumerSecret": "{ your twitter consumer secret }"
+    },
+    "recaptcha": {
+        "publicKey": "{ your recaptcha public key }",
+        "privateKey": "{ your recaptcha private key }",
     }
+
 }

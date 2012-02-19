@@ -9,7 +9,8 @@ var express = require('express')
   , less = require('less')
   , connect = require('connect')
   , everyauth = require('everyauth')
-  , nconf = require('nconf');
+  , nconf = require('nconf')
+  , Recaptcha = require('recaptcha').Recaptcha;
 
 
 /**
@@ -74,41 +75,63 @@ everyauth
     .getLoginPath('/login')
     .postLoginPath('/login')
     .loginView('account/login')
-    .loginLocals( function (req, res, done) {
-      setTimeout( function () {
-        done(null, {
-          title: 'login.  '
-        });
-      }, 200);
+    .loginLocals(function(req, res, done) {
+        setTimeout(function() {
+            done(null, {
+                title: 'login.  '
+            });
+        }, 200);
     })
-    .authenticate( function (login, password) {
-      var errors = [];
-      if (!login) errors.push('Missing login');
-      if (!password) errors.push('Missing password');
-      if (errors.length) return errors;
-      var user = usersByLogin[login];
-      if (!user) return ['Login failed'];
-      if (user.password !== password) return ['Login failed'];
-      return user;
+    .authenticate(function(login, password) {
+        var errors = [];
+        if(!login) errors.push('Missing login');
+        if(!password) errors.push('Missing password');
+        if(errors.length) return errors;
+        var user = usersByLogin[login];
+        if(!user) return ['Login failed'];
+        if(user.password !== password) return ['Login failed'];
+        return user;
     })
     .getRegisterPath('/register')
     .postRegisterPath('/register')
     .registerView('account/register')
-    .registerLocals( function (req, res, done) {
-      setTimeout( function () {
-        done(null, {
-          title: 'Register.  '
+    .registerLocals(function(req, res, done) {
+        setTimeout(function() {
+            done(null, {
+                title: 'Register.  ',
+                recaptcha_form: (new Recaptcha(nconf.get('recaptcha:publicKey'), nconf.get('recaptcha:privateKey'))).toHTML()
+            });
+        }, 200);
+    })
+    .extractExtraRegistrationParams(function(req) {
+        return {
+            confirmPassword: req.body.confirmPassword,
+            data: {
+                remoteip: req.connection.remoteAddress,
+                challenge: req.body.recaptcha_challenge_field,
+                response: req.body.recaptcha_response_field
+            }
+        }
+    })
+    .validateRegistration(function(newUserAttrs, errors) {
+        var login = newUserAttrs.login;
+        var confirmPassword = newUserAttrs.confirmPassword;
+        if(!confirmPassword) errors.push('Missing password confirmation')
+        if(newUserAttrs.password != confirmPassword) errors.push('Passwords must match');
+        if(usersByLogin[login]) errors.push('Login already taken');
+
+        // validate the recaptcha 
+        var recaptcha = new Recaptcha(nconf.get('recaptcha:publicKey'), nconf.get('recaptcha:privateKey'), newUserAttrs.data);
+        recaptcha.verify(function(success, error_code) {
+            if(!success) {
+                errors.push('Invalid recaptcha - please try again');
+            }
         });
-      }, 200);
+        return errors;
     })
-    .validateRegistration( function (newUserAttrs, errors) {
-      var login = newUserAttrs.login;
-      if (usersByLogin[login]) errors.push('Login already taken');
-      return errors;
-    })
-    .registerUser( function (newUserAttrs) {
-      var login = newUserAttrs[this.loginKey()];
-      return usersByLogin[login] = addUser(newUserAttrs);
+    .registerUser(function(newUserAttrs) {
+        var login = newUserAttrs[this.loginKey()];
+        return usersByLogin[login] = addUser(newUserAttrs);
     })
     .loginSuccessRedirect('/')
     .registerSuccessRedirect('/');

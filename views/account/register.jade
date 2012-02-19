@@ -20,10 +20,10 @@ section(class="main-content")
                     input(type="password", name=everyauth.password.passwordFormFieldName)
                 li(class="confirm-password")
                     label(for="confirmPassword") Confirm password
-                    input(type="password", id="confirmPassword", name="confirmPassword")
+                    input(type="password", name="confirmPassword")
                 li(class="recaptcha")
                     div(class="message-info")
-                        p To enable CAPTCHA verification...
+                        != recaptcha_form
 
             input(type="submit", value="Register")
             p
