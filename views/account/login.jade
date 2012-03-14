@@ -11,7 +11,7 @@ section(class="main-content")
       section(id="loginForm")
         form(method="post", action="/login")
             fieldset
-                legend Log in to Your Account
+                legend Log in to Your Account.
                 ol
                     li(class="username")
                         label(for=everyauth.password.loginFormFieldName) Email:
@@ -29,13 +29,27 @@ section(class="main-content")
   
     section(class="social", id="socialLoginForm")    
         form(method="post")
-            fieldset
-                legend Log in using another service
-                a.fb_button_medium(href='/auth/facebook', class="button")
-                    img(src=base + '/images/facebookLogin.png')
+            h2 Use another service to log in
+            div(class="message-info")
+                p 
+                    | To let users of this site log in using their accounts from other sites such as Facebook, Twitter, 
+                    | and Windows Live, you must update this site. For more information
+                    a(href="http://go.microsoft.com/fwlink/?LinkID=226949") click here
+                    |.
+              
+            // to use OAuth logins:
+            // - uncomment the fieldset below that contains the oauth providers
+            // - create an API key for each service, and put those keys in settings.json (see settings.example.json)
+                        
+            //
+                fieldset
+                    legend Log in using another service
+                    a.fb_button_medium(href='/auth/facebook', class="button")
+                        img(src=base + '/images/facebookLogin.png')
                 
-                br
-                br
+                    br
+                    br
 
-                a(href='/auth/twitter', style='border: 0px')
-                    img(style='border: 0px', src='https://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-l.png')
+                    a(href='/auth/twitter', style='border: 0px')
+                        img(style='border: 0px', src='https://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-l.png')
+

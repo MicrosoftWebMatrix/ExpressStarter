@@ -45,28 +45,30 @@ everyauth.
 	callback(null, usersById[id]);
     });
 
-// facebook authentication
-everyauth.
-    facebook.
-    appId(nconf.get('facebook:applicationId')).
-    appSecret(nconf.get('facebook:applicationSecret')).
-    findOrCreateUser(
-	function(session, accessToken, accessTokenExtra, fbUserMetadata){
-	    return usersByFacebookId[fbUserMetadata.claimedIdentifier] || 
-		(usersByFacebookId[fbUserMetadata.claimedIdentifier] = 
-		 addUser('facebook', fbUserMetadata));
-	}).
-    redirectPath('/');
+// facebook authentication - uncomment this section if you want facebook auth
 
-// twitter authentication
-everyauth
-  .twitter
-    .consumerKey(nconf.get('twitter:consumerKey'))
-    .consumerSecret(nconf.get('twitter:consumerSecret'))
-    .findOrCreateUser( function (sess, accessToken, accessSecret, twitUser) {
-      return usersByTwitId[twitUser.id] || (usersByTwitId[twitUser.id] = addUser('twitter', twitUser));
-    })
-    .redirectPath('/');
+//everyauth.
+//    facebook.
+//    appId(nconf.get('facebook:applicationId')).
+//    appSecret(nconf.get('facebook:applicationSecret')).
+//    findOrCreateUser(
+//	function(session, accessToken, accessTokenExtra, fbUserMetadata){
+//	    return usersByFacebookId[fbUserMetadata.claimedIdentifier] || 
+//		(usersByFacebookId[fbUserMetadata.claimedIdentifier] = 
+//		 addUser('facebook', fbUserMetadata));
+//	}).
+//    redirectPath('/');
+
+// twitter authentication - uncomment this section if you want twitter auth
+
+//everyauth
+//  .twitter
+//    .consumerKey(nconf.get('twitter:consumerKey'))
+//    .consumerSecret(nconf.get('twitter:consumerSecret'))
+//    .findOrCreateUser( function (sess, accessToken, accessSecret, twitUser) {
+//      return usersByTwitId[twitUser.id] || (usersByTwitId[twitUser.id] = addUser('twitter', twitUser));
+//    })
+//    .redirectPath('/');
 
 // username / password authentication
 everyauth
