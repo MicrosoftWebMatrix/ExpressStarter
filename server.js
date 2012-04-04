@@ -25,7 +25,7 @@ nconf.env().file({file: 'settings.json'});
 /**
 * EVERYAUTH AUTHENTICATION
 * -------------------------------------------------------------------------------------------------
-* allows users to log in and register using OAuth
+* allows users to log in and register using OAuth services
 **/
 
 everyauth.debug = true;
@@ -36,7 +36,7 @@ var usersById = {},
     usersByFacebookId = {},
     usersByTwitId = {},
     usersByLogin = {
-        'justbe@microsoft.com': addUser({ email: 'justbe@microsoft.com', password: 'azure'})
+        'user@example.com': addUser({ email: 'user@example.com', password: 'azure'})
     };
 
 everyauth.
@@ -45,7 +45,14 @@ everyauth.
 	callback(null, usersById[id]);
     });
 
-// facebook authentication - uncomment this section if you want facebook auth
+
+/**
+* FACEBOOK AUTHENTICATION
+* -------------------------------------------------------------------------------------------------
+* uncomment this section if you want to enable facebook authentication.  To use this, you will need
+* to get a facebook application Id and Secret, and add those to settings.json.  See:
+* http://developers.facebook.com/
+**/
 
 //everyauth.
 //    facebook.
@@ -59,7 +66,14 @@ everyauth.
 //	}).
 //    redirectPath('/');
 
-// twitter authentication - uncomment this section if you want twitter auth
+
+/**
+* TWITTER AUTHENTICATION
+* -------------------------------------------------------------------------------------------------
+* uncomment this section if you want to enable twitter authentication.  To use this, you will need
+* to get a twitter key and secret, and add those to settings.json.  See:
+* https://dev.twitter.com/
+**/
 
 //everyauth
 //  .twitter
@@ -70,7 +84,14 @@ everyauth.
 //    })
 //    .redirectPath('/');
 
-// username / password authentication
+
+
+/**
+* USERNAME & PASSWORD AUTHENTICATION
+* -------------------------------------------------------------------------------------------------
+* this section provides basic in-memory username and password authentication
+**/
+
 everyauth
   .password
     .loginWith('email')
@@ -193,8 +214,6 @@ app.use(require('./middleware/errorHandler')(errorOptions));
 
 
 
-
-
 /**
 * ROUTING
 * -------------------------------------------------------------------------------------------------
@@ -206,10 +225,6 @@ require('./routes/account')(app);
 
 // Global Routes - this should be last!
 require('./routes/global')(app);
-
-
-
-
 
 
 
