@@ -32,7 +32,7 @@
   },
   "noAnalyze": true,
   "license": "Apache",
-  "engine": {
+  "engines": {
     "node": ">=0.6.14"
   }
 }
