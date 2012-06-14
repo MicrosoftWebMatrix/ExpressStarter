@@ -13,6 +13,7 @@ module.exports = function(app) {
     
     // wildcard route for 404 errors
     app.get('/*', function(req, res) {
+        console.log(req.path)
         throw new errorHandler.NotFound;
     });
 }

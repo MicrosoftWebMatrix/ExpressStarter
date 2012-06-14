@@ -9,7 +9,7 @@
     },
     "recaptcha": {
         "publicKey": "{ your recaptcha public key }",
-        "privateKey": "{ your recaptcha private key }",
+        "privateKey": "{ your recaptcha private key }"
     }
 
 }
