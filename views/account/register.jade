@@ -1,7 +1,7 @@
 section(class="main-content")
     hgroup(class="title")
         h1= title
-        h2 Use the form(below to create a new account
+        h2 Create a new account.
     
     - if ('undefined' !== typeof errors && errors.length)
       ul#errors
@@ -21,9 +21,14 @@ section(class="main-content")
                 li(class="confirm-password")
                     label(for="confirmPassword") Confirm password
                     input(type="password", name="confirmPassword")
-                //li(class="recaptcha")
+                li(class="recaptcha")
                     div(class="message-info")
-                        != recaptcha_form
+                        p 
+                            | To enable CAPTCHA verification, register for reCAPTCHA keys at 
+                            a(href="http://recaptcha.net", target="_blank", title="register for a captcha") reCAPTCHA.net
+                            |. Rename settings.example.json to settings.json (if you have not done so already), and replace 'publicKey'
+                            | with your public key, and 'privateKey' with your private key.  Finally, uncomment '!= recaptcha_form' under this paragraph.
+                    //!= recaptcha_form
 
             input(type="submit", value="Register")
             p

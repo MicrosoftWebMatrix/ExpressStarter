@@ -18,15 +18,16 @@ html
       div(class='content-wrapper')
         div(class="float-left")
           p(class="site-title")
-            a(href="/") your logo here.
+            a(href="/") your logo here
         div(class="float-right")
           section#login
             ul
             -if(!everyauth.loggedIn)
                 li
-                    a(href="/login") Log in
-                li
                     a(href="/register") Register
+                li
+                    a(href="/login") Log in
+                    
             -else
                 -if(everyauth.facebook)
                     li Welcome !{everyauth.facebook.user.first_name} !{everyauth.facebook.user.last_name}!
