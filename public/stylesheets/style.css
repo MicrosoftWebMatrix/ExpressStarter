@@ -39,7 +39,7 @@ section {
   float: right;
 }
 .highlight {
-  background-color: #a0f743;
+  background-color: #93e140;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -72,7 +72,8 @@ h3 {
 h4 {
   font-size: 1.1em;
 }
-h5, h6 {
+h5,
+h6 {
   font-size: 1em;
 }
 /* main layout
@@ -117,7 +118,9 @@ footer {
   font-size: 2.3em;
   margin: 20px 0;
 }
-.site-title a, .site-title a:hover, .site-title a:active {
+.site-title a,
+.site-title a:hover,
+.site-title a:active {
   background: none;
   color: #c8c8c8;
   outline: none;
@@ -188,7 +191,8 @@ ul#menu li a:hover {
   color: #3e5667;
   padding: 20px 40px 30px 40px;
 }
-.featured hgroup.title h1, .featured hgroup.title h2 {
+.featured hgroup.title h1,
+.featured hgroup.title h2 {
   color: #fff;
 }
 .featured p {
@@ -198,7 +202,8 @@ ul#menu li a:hover {
 hgroup.title {
   margin-bottom: 10px;
 }
-hgroup.title h1, hgroup.title h2 {
+hgroup.title h1,
+hgroup.title h2 {
   display: inline;
 }
 hgroup.title h2 {
@@ -299,7 +304,8 @@ fieldset label {
 fieldset label.checkbox {
   display: inline;
 }
-fieldset input[type="text"], fieldset input[type="password"] {
+fieldset input[type="text"],
+fieldset input[type="password"] {
   border: 1px solid #e2e2e2;
   color: #333;
   font-size: 1.2em;
@@ -307,7 +313,8 @@ fieldset input[type="text"], fieldset input[type="password"] {
   padding: 5px;
   width: 300px;
 }
-fieldset input[type="text"]:focus, fieldset input[type="password"]:focus {
+fieldset input[type="text"]:focus,
+fieldset input[type="password"]:focus {
   border: 1px solid #8cc84b;
 }
 fieldset input[type="submit"] {
@@ -322,7 +329,8 @@ fieldset input[type="submit"] {
 .modal-popup {
   font-size: 0.7em;
 }
-.modal-popup input[type="text"], .modal-popup input[type="password"] {
+.modal-popup input[type="text"],
+.modal-popup input[type="password"] {
   width: 90%;
 }
 /* info and errors */
@@ -355,7 +363,8 @@ fieldset input[type="submit"] {
 .field-validation-valid {
   display: none;
 }
-input[type="text"].input-validation-error, input[type="password"].input-validation-error {
+input[type="text"].input-validation-error,
+input[type="password"].input-validation-error {
   border: 1px solid #e80c4d;
 }
 .validation-summary-errors {
@@ -374,7 +383,8 @@ ul#social li a {
   color: #999;
   text-decoration: none;
 }
-a.facebook, a.twitter {
+a.facebook,
+a.twitter {
   display: block;
   float: left;
   height: 24px;
@@ -394,7 +404,8 @@ a.twitter {
 @media only screen and (max-width: 850px) {
   /* header
       ----------------------------------------------------------*/
-  header .float-left, header .float-right {
+  header .float-left,
+  header .float-right {
     float: none;
   }
   /* logo */
@@ -443,7 +454,8 @@ a.twitter {
   }
   /* main layout
       ----------------------------------------------------------*/
-  .main-content, .featured + .main-content {
+  .main-content,
+  .featured + .main-content {
     background-position: 10px 0;
   }
   .content-wrapper {
@@ -454,7 +466,8 @@ a.twitter {
     padding: 10px;
   }
   /* page content */
-  article, aside {
+  article,
+  aside {
     float: none;
     width: 100%;
   }
@@ -467,7 +480,9 @@ a.twitter {
     padding-left: 10px;
     margin: 25px 0;
   }
-  ol.round li.one, ol.round li.two, ol.round li.three {
+  ol.round li.one,
+  ol.round li.two,
+  ol.round li.three {
     background: none;
   }
   /* features */
@@ -483,7 +498,8 @@ a.twitter {
     font-weight: 600;
   }
   /* forms */
-  fieldset input[type="text"], fieldset input[type="password"] {
+  fieldset input[type="text"],
+  fieldset input[type="password"] {
     width: 90%;
   }
   /* login page */
@@ -515,7 +531,8 @@ a.twitter {
     padding: 0;
     margin: 0;
   }
-  footer a.facebook, footer a.twitter {
+  footer a.facebook,
+  footer a.twitter {
     background: none;
     display: inline;
     float: none;

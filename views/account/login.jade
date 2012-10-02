@@ -24,8 +24,7 @@ section(class="main-content")
                         label(class="checkbox", for="rememberMe") Remember me?
                 input(type="submit", value="Login")
 
-        a(href="/register") Don't have an Account?
-        a(href="/forgotPassword") Did you forget your password?
+        a(href="/register") Don't have an Account?        
   
     section(class="social", id="socialLoginForm")    
         form(method="post")
@@ -34,22 +33,22 @@ section(class="main-content")
                 p 
                     | To let users of this site log in using their accounts from other sites such as Facebook, Twitter, 
                     | and Windows Live, you must update this site. For more information
-                    a(href="http://go.microsoft.com/fwlink/?LinkID=226949") click here
+                    a(href="http://go.microsoft.com/fwlink/?LinkId=255183&clcid=0x409", target="_blank") click here
                     |.
               
             // to use OAuth logins:
             // - uncomment the fieldset below that contains the oauth providers
             // - create an API key for each service, and put those keys in settings.json (see settings.example.json)
                         
-            //
-                fieldset
-                    legend Log in using another service
-                    a.fb_button_medium(href='/auth/facebook', class="button")
-                        img(src=base + '/images/facebookLogin.png')
+            
+            //fieldset
+                legend Log in using another service
+                a.fb_button_medium(href='/auth/facebook', class="button")
+                    img(src=base + '/images/facebookLogin.png')
                 
-                    br
-                    br
+                br
+                br
 
-                    a(href='/auth/twitter', style='border: 0px')
-                        img(style='border: 0px', src='https://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-l.png')
+                a(href='/auth/twitter', style='border: 0px')
+                    img(style='border: 0px', src='https://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-l.png')
 

@@ -178,6 +178,7 @@ function addUser (source, sourceUser) {
 
 
 var app = module.exports = express.createServer();
+everyauth.helpExpress(app);
 
 /**
 * CONFIGURATION
@@ -272,7 +273,7 @@ io.sockets.on('connection', function(socket) {
 * this starts up the server on the given port
 **/
 
-everyauth.helpExpress(app);
+
 app.listen(process.env.PORT || 3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 

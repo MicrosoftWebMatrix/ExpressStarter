@@ -11,21 +11,23 @@ html
     
     // include default scripts and any view scripts
     script(src=base + '/javascripts/jquery-1.7.min.js')
+    script(src=base + '/javascripts/modernizr.js')
     
   body   
     header
       div(class='content-wrapper')
         div(class="float-left")
           p(class="site-title")
-            a(href="/") your logo here.
+            a(href="/") your logo here
         div(class="float-right")
           section#login
             ul
             -if(!everyauth.loggedIn)
                 li
-                    a(href="/login") Log in
-                li
                     a(href="/register") Register
+                li
+                    a(href="/login") Log in
+                    
             -else
                 -if(everyauth.facebook)
                     li Welcome !{everyauth.facebook.user.first_name} !{everyauth.facebook.user.last_name}!
@@ -52,5 +54,5 @@ html
         div(class="float-right")
           ul#social
             li
-              a(href="http://facebook.com", class="facebook") Facebook
-              a(href="http://twitter.com", class="twitter") Twitter
+              a(href="http://facebook.com/MicrosoftWebMatrix", class="facebook") Facebook
+              a(href="http://twitter.com/WebMatrix", class="twitter") Twitter
