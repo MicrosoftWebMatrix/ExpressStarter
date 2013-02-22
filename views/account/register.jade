@@ -31,7 +31,7 @@ block content
                                 a(href="http://recaptcha.net", target="_blank", title="register for a captcha") reCAPTCHA.net
                                 |. Rename settings.example.json to settings.json (if you have not done so already), and replace 'publicKey'
                                 | with your public key, and 'privateKey' with your private key.  Finally, uncomment '!= recaptcha_form' under this paragraph.
-                     != recaptcha_form
+                     //!= recaptcha_form
 
                 input(type="submit", value="Register")
                 p

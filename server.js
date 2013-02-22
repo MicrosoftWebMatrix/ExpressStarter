@@ -31,7 +31,7 @@ nconf.env().file({ file: 'settings.json' });
 
 everyauth.debug = true;
 
-// Configure Facebook auth
+// Configure local password auth
 var usersById = {},
     nextUserId = 0,
     usersByFacebookId = {},
@@ -55,17 +55,17 @@ everyauth.
 * http://developers.facebook.com/
 **/
 
-everyauth.
-    facebook.
-    appId(nconf.get('facebook:applicationId')).
-    appSecret(nconf.get('facebook:applicationSecret')).
-    findOrCreateUser(
-	function (session, accessToken, accessTokenExtra, fbUserMetadata) {
-	    return usersByFacebookId[fbUserMetadata.claimedIdentifier] ||
-		(usersByFacebookId[fbUserMetadata.claimedIdentifier] =
-		 addUser('facebook', fbUserMetadata));
-	}).
-    redirectPath('/');
+//everyauth.
+//    facebook.
+//    appId(nconf.get('facebook:applicationId')).
+//    appSecret(nconf.get('facebook:applicationSecret')).
+//    findOrCreateUser(
+//	function (session, accessToken, accessTokenExtra, fbUserMetadata) {
+//	    return usersByFacebookId[fbUserMetadata.claimedIdentifier] ||
+//		(usersByFacebookId[fbUserMetadata.claimedIdentifier] =
+//		 addUser('facebook', fbUserMetadata));
+//	}).
+//    redirectPath('/');
 
 
 /**
@@ -76,14 +76,14 @@ everyauth.
 * https://dev.twitter.com/
 **/
 
-everyauth
-  .twitter
-    .consumerKey(nconf.get('twitter:consumerKey'))
-    .consumerSecret(nconf.get('twitter:consumerSecret'))
-    .findOrCreateUser(function (sess, accessToken, accessSecret, twitUser) {
-        return usersByTwitId[twitUser.id] || (usersByTwitId[twitUser.id] = addUser('twitter', twitUser));
-    })
-    .redirectPath('/');
+//everyauth
+//  .twitter
+//    .consumerKey(nconf.get('twitter:consumerKey'))
+//    .consumerSecret(nconf.get('twitter:consumerSecret'))
+//    .findOrCreateUser(function (sess, accessToken, accessSecret, twitUser) {
+//        return usersByTwitId[twitUser.id] || (usersByTwitId[twitUser.id] = addUser('twitter', twitUser));
+//    })
+//    .redirectPath('/');
 
 
 
