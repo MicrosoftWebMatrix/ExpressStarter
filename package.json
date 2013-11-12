@@ -6,11 +6,11 @@
     "start": "node server"
   },
   "dependencies": {
-    "express": "3.0.5",
-    "jade": "*",
-    "less-middleware": "*",
-    "nconf": "~0.6.7",
-    "socket.io": "~0.9.13",    
+    "express": "~3.4.4",
+    "jade": "~0.35.0",
+    "less-middleware": "~0.1.13",
+    "nconf": "~0.6.8",
+    "socket.io": "~0.9.16",
     "everyauth": "https://github.com/bnoguchi/everyauth/tarball/express3",
     "recaptcha": "~1.2.0"
   }

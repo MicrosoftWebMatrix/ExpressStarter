@@ -403,7 +403,7 @@ a.twitter {
 ********************/
 @media only screen and (max-width: 850px) {
   /* header
-      ----------------------------------------------------------*/
+    ----------------------------------------------------------*/
   header .float-left,
   header .float-right {
     float: none;
@@ -453,7 +453,7 @@ a.twitter {
     padding: 0;
   }
   /* main layout
-      ----------------------------------------------------------*/
+    ----------------------------------------------------------*/
   .main-content,
   .featured + .main-content {
     background-position: 10px 0;
@@ -518,7 +518,7 @@ a.twitter {
     width: auto;
   }
   /* footer
-      ----------------------------------------------------------*/
+    ----------------------------------------------------------*/
   footer {
     text-align: center;
     height: auto;
